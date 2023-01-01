@@ -1,0 +1,146 @@
+:root {
+  --soft_blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main_bg: hsl(217, 54%, 11%);
+  --card_bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --font: "Outfit", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--main_bg);
+  color: var(--white);
+  font-family: var(--font);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  width: 320px;
+  padding: 1.5rem;
+  background-color: var(--card_bg);
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+.nft {
+  position: relative;
+}
+
+.nft_image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.overlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  width: 272px;
+  height: 272px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.overlay img {
+  fill: var(--white);
+}
+
+.overlay:hover {
+  opacity: 01;
+  transition: 0.2s ease-in-out;
+}
+
+main h1 {
+  font-size: 23px;
+  cursor: pointer;
+}
+
+main h1:hover {
+  color: var(--cyan);
+}
+
+.description {
+  color: var(--soft_blue);
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.time,
+.eth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.eth p {
+  color: var(--cyan);
+}
+
+.time p {
+  color: var(--soft_blue);
+  font-weight: 300;
+}
+
+hr {
+  border: 0.5px solid var(--line);
+}
+
+.creator {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  color: var(--soft_blue);
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.creator img {
+  width: 11%;
+  border: 1px solid white;
+  border-radius: 50px;
+}
+
+.name {
+  color: var(--white);
+  cursor: pointer;
+}
+
+.name:hover {
+  color: var(--cyan);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  z-index: -10;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--cyan);
+  text-decoration: none;
+}
